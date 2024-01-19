@@ -5,7 +5,7 @@
 "use strict";  // treat all Js code as newer veersin.  when we write this line.
 
 
-//alert(2+3) //we are using nodejs not browser so this alert doesn't work. it shows only in browser right.
+//alert(2+3) //we are using nodejs not browser so this alert doesn't work. it shows only in browser .
 
 
 /*
