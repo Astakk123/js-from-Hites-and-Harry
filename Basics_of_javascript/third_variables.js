@@ -9,7 +9,7 @@
 
 /*
 semicolon and spaces where to use is important and in the world of coding readability is important just using line by line 
-Ex- console.log(22+3) console.log(Asta) this code will run 
+Ex- console.log(22+3) console.log(Asta) this code will not run 
    console.log(22+3); console.log(Asta) this will run
    but we should write it in different line like 
     console.log(22+3); 
