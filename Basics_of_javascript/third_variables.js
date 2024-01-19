@@ -88,6 +88,7 @@ undefined
 string
 @Astakk123 ➜ /workspaces/js-from-Hites-and-Harry (main) $ 
 
+ Second class completed
 
 
 */
