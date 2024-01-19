@@ -1,8 +1,8 @@
-//discussing Data Types after completing the variables
+//discussing Data Types after completing the variables.
 
-//history = there is a lot of difference in the javascript of then and now at earlier there were no classes, modules, arrow function but now that are available. So in the past a lot of things had been written in the old style or standard so the commitee decided to manage it by declaring standard so tha these can be managed.
+//history = there is a lot of difference in the javascript of then and now. At earlier there were no classes, modules, arrow function, but now that are available. So in the past a lot of things had been written in the old style or standard so the commitee decided to manage it by declaring standard so tha these can be managed.
 
-"use strict";  // treat all Js code as newer veersin 
+"use strict";  // treat all Js code as newer veersin. 
 
 //alert(2+3) //we are using nodejs not browser so this alert doesn't work. it show only in browser.
 
