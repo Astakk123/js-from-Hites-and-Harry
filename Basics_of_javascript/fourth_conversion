@@ -1,0 +1,57 @@
+// This clss is all about the data type conversion. Why it is so confusing ?
+
+/*
+let score = 31;
+
+console.log(typeof score);
+typeof is number 
+*/
+
+// suppose the above value is like this 
+// let score = "31"
+// console.log(typeof score) //here type of is string
+
+
+// But if it is necessary to do the operation in number then we can convert the string to number 
+let score = "31abc"
+
+let valueInNumber = Number(score)               // now it will change the score to number earlier it was as string
+console.log(typeof valueInNumber)
+
+// But when the 33 is given as "33abc"  then also it will change to the number to know what its value we should check the value 
+
+console.log(typeof valueInNumber)  // after conversion of the "31abc" to number the type of come as number
+
+console.log(valueInNumber)        //When we print its value then it doesnot give any number it says (NaN) not a number mens mof number and text because it was "31abc" //NaN is also a special type
+
+
+//    score   value     typeof
+    // "33" => 33       Number (When we convert the "33") other wise its value is same but it will come as string because of the double qouotation 
+    //"33abc"=>NaN      Number (when we conver the "33abc") it changes to value NaN and typeof is Number
+    //null  => 0        Number
+    //"null"=>NaN       Number
+    //true  =>1         Number
+    //false=>0          Number
+    //undefined=>Nan    Number
+    //"Asta"=>NaN       Number
+
+let isLoggedIn = "Asta"
+let booleanIsLoggedIn = Boolean(isLoggedIn)
+console.log(booleanIsLoggedIn)
+console.log(typeof booleanIsLoggedIn) 
+
+// isloggedIn       printvalu       typeof
+// 1                true            boolean
+//0                 false           boolean
+// "" vacantstring  false           boolean
+//"Asta"            true            boolean
+
+let someNumber = 33
+let stringSomeNumber = String(someNumber)
+console.log(stringSomeNumber)
+console.log(typeof stringSomeNumber)
+
+
+
+
+
