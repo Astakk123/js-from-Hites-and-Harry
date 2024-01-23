@@ -52,6 +52,29 @@ console.log(stringSomeNumber)
 console.log(typeof stringSomeNumber)
 
 
+//******************************* Operations ***************************/ fifth class
+
+let value = 3 
+let negValue = -value
+console.log(negValue)
+  
+// some basics operators and their operation shoud be studied by self
+
+/*
+
+console.log(2+3)
+console.log(2-3)
+console.log(2*3)
+console.log(2**3)
+console.log(2/3)
+console.log(2%3)
+
+*/
+let str1 = "Asta"
+let str2 = " karkaria"  // when  title was like "karkaria" result was Astakarkaria and when " karkaria" result Asta karkaria
+let str3 = str1 + str2 
+console.log(str3)
+
 
 
 
