@@ -32,3 +32,32 @@ const heros = ["shaktiman", "naagraj", "doga"]; //Arry
     console.log("Hello world");
  }
 
+//+++++++++++++++++++++++++++++++++++++++ stack and heap memory ++++++++++++++++++++++++++++++++++++++++++++++++ class 10
+
+ // memory are two types basically Stack and Heap
+ // Stack (primitive), Heap (non-primitive)
+
+ let myUserid = "Astakk"
+ let anotherid = myUserid
+ anotherid = "astabhai"
+
+ console.log(myUserid); //Astakk
+ console.log(anotherid);//astabhai
+ //this above was stack memory means they are all primitive data type 
+
+// this is now object which is non-primitive means Heap memory
+
+let userOne = {
+   email: "Asta@gmail.com",
+   upi: "user@ybl"
+}
+let userTwo = userOne
+ userTwo.email = "Asta@google.com"
+
+ console.log(userOne.email);
+ console.log(userTwo.email);
+
+
+ // the end
+
+
