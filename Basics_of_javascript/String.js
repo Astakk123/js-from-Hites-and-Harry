@@ -32,3 +32,4 @@ console.log(newStringOne.trim()) //this is how we trim and there are left trim r
 const url = "https://Asta.com/howtobe%23coder" //this is an url but i want to remove the %23 form this and want to replace it with dash then we will do the following
 console.log(url.replace("%23", "-"));
 console.log(url.includes("Asta"))
+// split can be done based on space and dash and . these are called separator and done using .split 
