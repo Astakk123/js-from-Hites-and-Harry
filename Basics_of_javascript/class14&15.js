@@ -41,7 +41,11 @@ console.log(myn2);
 
 //++++++++++++++++++++++++++++++++++++++++ Array part-2 class-15 +++++++++++++++++++++++++++++++++++++++++++++++++
 
+const marvel_heros = ["thor", "Ironman", "spiderman"]
+const dc_heros = ["superman", "flash", "batman"]
 
+marvel_heros.push(marvel_heros)
+console.log("marvel_heros");
 
 
 
