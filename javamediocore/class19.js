@@ -52,6 +52,25 @@ console.log("Result: ", result);
 
 // the above can also be written simply check one is in comment and another is in active
 
+// the values above taken are one way letus see how many ways there to do the same and what can we do
+
+function loginUserMessage(username){
+    return `${username} just logged in`
+}
+// how to call the function
+loginUserMessage("Asta")     // this will not print anything if we run this because we have missed to write print because we have used return it will return if we don't store the result in a variable or print it we will not get it 
+
+console.log(loginUserMessage("Asta")) // result is asta just logged in (now this is the proper way )
+console.log(loginUserMessage()) // result is undefined because the argument is not given to avoid this we can use if in the function
+
+// consider a situation  here below you can see in the function in the username a small change has been done and the console is different and the result is different here 
 
 
+
+// look at this situation  here the function is same but the console contain the kksahan and it print kksahab but when the console in the above case was vacant username asta was printed and when there was only username in the function and console was vacant then it was undefined
+
+function loginUserMessage(username = "Asta"){
+    return `${username} just logged in`
+}
+console.log(loginUserMessage("KKsahab"))
 
