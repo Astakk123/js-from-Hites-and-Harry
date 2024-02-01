@@ -53,7 +53,7 @@ function chai(){
     let username = "Asta"
     console.log(this.username);
 }
-chai() // here after calling the functio we got undefiend as the result because the contxt console.log(this.username) is not work in the function 
+chai() // here after calling the functio we got undefiend as the result because the contxt console.log(this.username) dooes not work in the function 
 */
 /*
 const chai = function () {
