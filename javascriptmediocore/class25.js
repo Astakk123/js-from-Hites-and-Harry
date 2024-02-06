@@ -1,4 +1,4 @@
-// ++++++++++++++++++++++++ How does javascript execute code + call stack ++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++ How does javascript execute code + call stack  and many more ++++++++++++++++++++++++++++++++
 
 //javascript is a single threaded
 //jvascript Execution context 
