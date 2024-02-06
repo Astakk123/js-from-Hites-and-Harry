@@ -1,3 +1,4 @@
+
 // scope level and mini hoisting 
 
 //nested scope
