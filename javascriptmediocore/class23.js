@@ -11,6 +11,7 @@ const user = {
 }
 // user.welcomeMessage() // here the result is Asta , welcome to website as expected
 
+
 // "this" we have used above is used to refer the current context 
 // here we use (user.welcomeMessage())  because user is an object and we acces something in an object like the above .notation with the key
 
