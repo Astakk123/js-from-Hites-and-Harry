@@ -1,5 +1,6 @@
 //+++++++++++++++++++++ Function with object and Array, Functions part - 2 +++++++++++++++++++++++++++++++
 
+
 function calculateCartPrice(num1){
     return num1
 }
