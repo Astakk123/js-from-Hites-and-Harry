@@ -1,5 +1,6 @@
 //++++++++++++++++++++++ functions and parameters ++++++++++++++++++++++++++++
 
+
 //function is something when we write 10 or 14 line code and package it in one pack suppose
 /*
 console.log("a")
