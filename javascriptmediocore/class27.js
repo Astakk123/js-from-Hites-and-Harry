@@ -40,9 +40,36 @@ for (let i = 0; i < 10; i++) {
 
 let myArry = ["flash", "batman", "superman"]
 
-console.log(myArry.length); //this is used to know the length of the array
+//console.log(myArry.length); //this is used to know the length of the array
 
 for (let index = 0; index < myArry.length; index++) {
     const element = myArry[index];
-    console.log(element);   
+    //console.log(element);   
 }
+
+//+++++++++++++++++++++++++++++++++++ break and continue ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// this is how we use the break
+
+for (let index = 1; index <= 20; index++) {
+    if ( index ==5){
+        console.log(`Detected 5`);
+        break
+    }
+    console.log(`value of index is ${index}`);
+    
+    
+}
+// the result of the above will stop after detecting  and printing the 5 because we have used break 
+
+// this is how we use continue 
+for (let index = 1; index <= 20; index++) {
+    if ( index ==5){
+        console.log(`Detected 5`);
+        continue
+    }
+    console.log(`value of index is ${index}`);
+    
+    
+}
+// the result of the above will run the code until it has met the condition of the loop menas upto the 20 it will print the detected 5 but not stop there continue untill it finished because of the continue 
