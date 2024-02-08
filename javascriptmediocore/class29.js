@@ -114,9 +114,32 @@ coding.forEach((item)=>{
 // it gives the same value like the above but this is written in little different style which is called as arrow function 
 
 function printMe(item){
-    console.log(item)
+   // console.log(item)
 }
-coding.forEach(printMe) // this is used if your function is written in different line then just give the reference as we have given here the printMe
+// coding.forEach(printMe) // this is used if your function is written in different line then just give the reference as we have given here the printMe
 
 
+coding.forEach((item, index, arr) => {
+    //lconsole.log(item, index, arr)
+})
+// here it will print the item, idex and arr of the above given which is the value of the coding, here coding is the variable and all the name java, ruby and more  are value and these all are in an array 
 
+//declaring Objects in array 
+const myCoding =[
+    {
+        languageName: "java",
+        languageFileName: "java"
+    },
+    {
+        languageName: "python",
+        languageFileName: "python"
+    },
+    {
+        languageName: "cpp",
+        languageFileName: "cpp"
+    }
+] 
+
+myCoding.forEach((item) => {
+    console.log(item.languageFileName);
+})
