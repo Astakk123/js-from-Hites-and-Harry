@@ -41,7 +41,7 @@ function chai(){
 chai()  //calling the function 
 */
 
-// after doing this we got a lot of things when we run it lets make some changes in the above function see below
+// after doing this we got a lot of things when we run it,  lets make some changes in the above function see below
 /*
 function chai(){
     let username = "Asta"
@@ -88,20 +88,23 @@ const chai =  () => {
 // const addTwo = (num1, num2) => num1 + num2  // we can write it like (num1 + num2) but if we use {num1 + num2} then we are bound to write the return word like the first one 
 // console.log(addTwo(3, 4))
 
-// the benifit of use of parenthesis is important when we try to return an obje then it is neccesary see how 
+// the benifit of use of parenthesis is important when we try to return an obje then it is neccesary otherwise we would get undefined if we write the same inside a curly braces without using parenthesis  see how 
 
 
 // const addTwo = (num1, num2) => {usrname: "Asta "}
 
-// console.log(addTwo(3, 4))  // here the result is undefined  is undefined 
+// console.log(addTwo(3, 4))  // here the result is undefined  because object can't be returned like this we have to write the same inside a parentesis
 
 const addTwo = (num1, num2) => ({usrname: "Asta "})
 console.log(addTwo(3, 4)) // here the result is {username: 'Asta ' }
+//here one should not get confused to add the numbers by puttting the numbers inside the curly braces because it is used only in the case of object other wise only use the parenthesis
 
+const add = (num1, num2) => (num1 + num2)
+console.log(add(3, 4))
 // ex- loops 
 
-const myArray = [3, 3, 4, 3, 2]
-myArray.forEach()
+// const myArray = [3, 3, 4, 3, 2]
+// myArray.forEach()
 // has to be discussed later on when loop will be studied
 
 
