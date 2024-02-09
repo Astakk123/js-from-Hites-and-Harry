@@ -100,8 +100,8 @@ const resultNum = myNumbers
 
 const yourNums = [1, 2, 3, 4]
 // const myTotal = yourNums.reduce(function (acc, currval) {
-//     console.log(`acc: ${acc} and currval: ${currval}`)
-//     return acc +currval
+    // console.log(`acc: ${acc} and currval: ${currval}`)
+//     return acc + currval
 // }, 0)
 //here the zero is the initial value given like this 
 
@@ -112,9 +112,31 @@ const yourNums = [1, 2, 3, 4]
 
 const myTotal = yourNums.reduce((acc, currval) => acc + currval, 0)
 // console.log(`acc: ${acc} and currval: ${currval}`) this doesn't work here have to see what is wrong with it later on 
-console.log(myTotal)
 
+// console.log(myTotal)
 
+const shoppingCart = [
+  {
+      itemName: "js course",
+      price: 2999
+  },
+  {
+      itemName: "py course",
+      price: 999
+  },
+  {
+      itemName: "mobile dev course",
+      price: 5999
+  },
+  {
+      itemName: "data science course",
+      price: 12999
+  },
+]
+
+const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+
+ console.log(priceToPay);
 
 
 
