@@ -1,0 +1,62 @@
+<!--
++++++++++++++++++ Here in this class we discussed a lot DOM ++++++++++++++++++++++++++++++
+(1) How to target something and work on that using console 
+(2) we used the webpage of the class31 and played a lot 
+To target anything what to do is first write the document in console or in script
+
+Ex - here 
+
+document.getElementById("title")
+
+this is how we target an element by that's id here the id of the element is title the basic 
+about this is first we select document by typing document then a dot then getElementById it 
+will target the element navigating the id and as we know it is a method then we have to give 
+a parenthesis after it and we have to assign a parameter which is the id of the element here 
+it is title then it will give the full element 
+
+then we can access anything that is in side the element using this only see how 
+
+document.getElementById('title').id   | it will show the title because the id is title 
+document.getElementById('title').class | it will not give anything show undefined to get class have to write className 
+document.getElementById('title').className | it will give the heading because class is heading 
+
+we can access the attribute of the all, see how?
+
+document.getElementById('title').getAttribute('id')  | here the result is title because id is title 
+document.getElementById('title').getAttribute('class') | here the result is heading because class is heading 
+
+we can set the attribute and many more here, see how ?
+
+document.getElementById('title').setAttribute('class', 'test')   
+it will set the class test and it will overwrite the first one  which is very very important to remember the old 
+class we had given will not be there in the element after doing this to keep the style same we shoule add another
+class using the old class name 
+
+we should store this in a variable to easily access, see how 
+
+document.getElemtnById('title')  we have to store in the name of title, see how 
+const title = document.getElemtnById('title')  Now the title is enough to access the whole element,  see how 
+
+    title.style.color = 'white '
+    title.style.backgroundColor = 'black'
+    title.style.padding = '12px'
+    title.style.boarderRadius = "15px"
+
+these are the style added in the element the title represents the documetn.getElementById('title')
+and its value is the wholw element and like the above we can add the style and many more 
+
+++++++++++++++ interesting part how to add content and finding content +++++++++++++++++++++++++
+
+From now we will only use the title instead of document.getElementById('title') because 
+we have stored this long line in the variable title in the line 38 
+
+finding content 
+
+title.innerText     | thsi will not show the content if we have use display none  
+title.textContent  | Used when we have to see all the content even the display none is used in the style
+title.innerHTML     | and it will show the whole line meand html value, like  span or style added in the element even when 
+
+
+
+
+-->
