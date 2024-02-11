@@ -78,6 +78,40 @@ document.querySelector('p:first-child') it will select and show the first child 
  first child of p
 
 
+ When you want to select a list and ul or ol then we directly acces that, see how 
+
+ document.querySelector('ul')                 we get the full ul here 
+lets store it 
+const myUl = document.querySelector('ul')
+then we will use the variable instead of this long line 
+
+myUl.querySelector('li')            it gives the list items
+here again if i want to style then i should store the list item in a variable to use it easily 
+const  turnGreen = myUl.querySelector('li')
+
+to style it 
+
+turnGreen.style.backgroundColor = 'green'  this is how we give the background color 
+
+
+
+++++++++++++++++++++++++++++++++++++++ querySelectorAll +++++++++++++++++++++++++++++++++++++ 
+
+document.querySelectorAll('li')
+we get a node list of li
+then store in variable   const tempLists = document.querySelectorAll('li')
+tempLists.style.color = 'green'  it will not execute because it has not specific li list then what, see here
+tempLists[0].style.color = 'green'  it will  execute because it has  specific li list that is 0, see here
+
+
+to do background color in all the li, i should use the loop which is forEach in the li 
+
+tempLists.forEach(function (list) {
+    list.style.backgroundColor = 'green'
+})
+
+ +++++++++++++++++++++++++++ getelementByClassName +++++++++++++++++++++++++++
+
 
 
 
