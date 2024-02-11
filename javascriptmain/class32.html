@@ -112,6 +112,32 @@ tempLists.forEach(function (list) {
 
  +++++++++++++++++++++++++++ getelementByClassName +++++++++++++++++++++++++++
 
+giving class to the element we can access that usting getElementByclass Name 
+
+document.getElementByClassName('className')  then we get a HTML collection 
+
+we stored it and tried to use different methods in it like map and foreach but it doesn't  work 
+
+if we have this kind of things and we have to use methods then we have to convert it and use it 
+
+like 
+
+const newEx = document.getElementByClassName('className')   in class name we shoule put the value of class of the html
+
+converting it to Array
+
+Array.from(newEx)                   then it will converted to array then store it 
+
+const myNewConvertedArray = Array.from(newEx)   now we can use all the methods that work for array here 
+
+myNewConvertedArray.forEach(function (list){
+    list.style.color = 'black'
+})
+
+
+you can use map and many more that are used in a array because we have converted the 
+html collection to the Array  
+
 
 
 
