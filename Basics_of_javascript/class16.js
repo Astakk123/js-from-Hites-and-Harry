@@ -42,4 +42,4 @@ JsUser.greetingTwo = function(){
     console.log(`Hello JS user I Am, ${this["full"]}`);
 
 }
-console.log(JsUser.greetingTwo())
+console.log(JsUser.greetingTwo())    //why undefined 
