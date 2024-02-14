@@ -15,5 +15,40 @@
 </body>
 <script>
 
+
+ const parent = document.querySelector('.parent')
+ console.log(parent)
+ console.log(parent.children)   //we get html collection here 
+ console.log(parent.children[1])  //result is tuesday with html tags because we have puted the value 1 
+ console.log(parent.children[1].innerHTML)   //here we get only tuesday only content because we have used innerHTML
+ //now lets use the loop all the loop will not work here because it is a html collection not the array 
+ //but the clasic forloop will work, So lets use 
+
+// for (let i = 0; i < parent.children.length; i++) {
+//     console.log(parent.chilren[i].innerHTML);
+    
+// } I don't know why this is not working 
+
+parent.children[1].style.color = "orange"
+console.log(parent.firstElementChild)
+console.log(parent.firstElementChild.innerHTML)
+console.log(parent.lastElementChild.innerHTML)
+
+//we can directly select through attribute then move to parent, see how 
+ const dayOne = document.querySelector(".day") 
+ console.log(dayOne)  //it select the first one if you have multiple same attribute her it is day and this is used in all the class attribute of the childrens here we selected one child
+
+// now go to the parent through child as we have gone to child 
+
+console.log(dayOne.parentElement);   //it will show the parent element 
+console.log(dayOne.nextElementSibling)   //it will show the siblint next element
+
+console.log("NODES: ",parent.childNodes) //it shows the Nodelist(9) for this item only
+//every element will show as the element node  and break are known as textnode so its node list looks double but directly giving morethan one line then it will be considered as one 
+
+
+// check part 2
+
+
 </script>
 </html>
