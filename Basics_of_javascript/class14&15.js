@@ -62,8 +62,11 @@ const dc_heros = ["superman", "flash", "batman"]
 const all_new_heros = [...marvel_heros, ...dc_heros] // this is spread operator using ... we do this 
 console.log(all_new_heros)
 
+//when there is nesting then we use the .flat() method to flattern the array, and there is another method known as .flatMap()
+
 const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
-const real_another_array = another_array.flat(Infinity) // in the place of infinity we write the depth of the the array 
+const real_another_array = another_array.flat(Infinity) // in the place of infinity we write the depth of the the array
+// when we write infinity means you don't have to worry it will automatically flattern all the array what ever may be the depth of the nesting  
 console.log(real_another_array)
 
 console.log(Array.isArray("Asta"));
