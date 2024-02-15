@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai Aur Code </title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+
+    </ul>
+</body>
+<script>
+   //there are no of ways to add an element and wire text there we can directly do that but to add more we hsould design a function like the below  
+    
+
+    function addLanguage(langName){
+        const list = document.createElement('li');
+        list.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(list)
+
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+    // it takes time and for optimisation we can make some changes to this look at this 
+
+    function addOptiLanguage(langName){
+        const list = document.createElement('li')
+        list.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(list)
+    }
+    addOptiLanguage("golang")
+
+// in the third line of the function we have written in short if we simplify then it is like this  const addText = document.createTextNode(langName) and li.appendChild(addText)  but we did it in short in one line i.e li.appendChild(document.createTextNode(langName))  we shaved one line 
+
+</script>
+
+</html>
