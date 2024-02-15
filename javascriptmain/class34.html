@@ -14,7 +14,10 @@
     </ul>
 </body>
 <script>
-   //there are no of ways to add an element and wire text there we can directly do that but to add more we hsould design a function like the below  
+
+    //++++++++++++++++++++++++++++++++ adding element ++++++++++++++++++++++++++++++++++++++++
+
+   //there are no.of ways to add an element and wire text there we can directly do that but to add more we hsould design a function like the below  
     
 
     function addLanguage(langName){
@@ -37,6 +40,27 @@
 
 // in the third line of the function we have written in short if we simplify then it is like this  const addText = document.createTextNode(langName) and li.appendChild(addText)  but we did it in short in one line i.e li.appendChild(document.createTextNode(langName))  we shaved one line 
 
+ //++++++++++++++++++++++++++++++++++ editing ++++++++++++++++++++++++++++++++++++++
+
+ //edit
+
+ const secondLang = document.querySelector("li:nth-child(2)")
+//  secondLang.innerHTML = "mojo"  //this can be done directly but not  optimized so let's see how t o  do that then
+// in this second approach we create element 
+ const newli = document.createElement('li')
+ newli.textContent = "mojo"
+ secondLang.replaceWith(newli)
+
+//  another Example,  this is another way to edit
+const anotherLang = document.querySelector("li:first-child")
+anotherLang.outerHTML = '<li>Typescript</li>' 
+
+//+++++++++++++++ remove ++++++++++++++++++++++++++++++
+//remove 
+const kuchhbhi = document.querySelector('li:last-child')
+kuchhbhi.remove()
+
+// here we removed the last li 
 </script>
 
 </html>
