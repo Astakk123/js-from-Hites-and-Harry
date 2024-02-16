@@ -66,9 +66,31 @@ form.addEventListener('submit', function (e) {
 
 ```
 
-## project 3 
+## project 3 solution code
 ```javascript
+const clock = document.getElementById('clock');
 
+// let date = new Date()
+// console.log(date)
+// console.log(date.toLocaleTimeString()) // this is how we declare time and we get local time
+
+// setInterval(function (){
+//   let date = new Date()
+//   console.log(date.toLocaleTimeString())
+// }, 1000)
+
+// we did this just to know whethere it is working or not using console now its time to show it
+
+//setting up interval and completing 
+
+setInterval(function () {
+  let date = new Date();
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+//added some style 
+clock.style.color = 'black'
+clock.style.backgroundColor = 'white'
 
 ```
 ## project 4 
