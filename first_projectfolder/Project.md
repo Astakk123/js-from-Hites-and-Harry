@@ -95,23 +95,27 @@ clock.style.backgroundColor = 'white'
 ```
 ## project 4  (Guess Number Game)
 ```javascript
-//not completed yet 
+//strategy should be written first on plane paper
 
-const randomNum = parseInt(Math.random() * 100 + 1);
+let randomNumber = parseInt(Math.random() * 100 + 1);
 
-const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
-const Guesses = document.querySelector('.guesses');
+const submit = document.querySelector('#subt');
+const guessSlot = document.querySelector('.guesses');
 const guessRemaining = document.querySelector('.lastResult');
 const lowOrHi = document.querySelector('.lowOrHi');
-const startOver = document.querySelector('.resultparas');
+const startOver = document.querySelector('.resultParas');
 
 const p = document.createElement('p');
+console.log(p);
 
 let prevGuess = [];
 let numGuess = 1;
 
 let playGame = true;
+
+// first check wheter you are eligible to play the game or not like this
+
 if (playGame) {
   submit.addEventListener('click', function (e) {
     e.preventDefault();
@@ -120,70 +124,83 @@ if (playGame) {
     validateGuess(guess);
   });
 }
+
+// this is the step wher we declare the full sequence 
+// first check it number or any other and print alert then it pushes the value to the array and then check the num of guess then it is clean up guess and then show message according to and then finish the game if it fulfill the condition else clean up *clenup is used twice because if it end the game because the num guess is equal to the maximum attempt the also it clean up or if it doesn't then also it clean up 
+
+// then it passes to the check method i.e checkGuess(guess)
+
 function validateGuess(guess) {
   if (isNaN(guess)) {
-    alert('please enter a valid number');
+    alert('please enter a number ');
   } else if (guess < 1) {
-    alert('please enter a number more than 1');
+    alert('please enter a number more than 0');
   } else if (guess > 100) {
-    alert('please enter a number less than 100');
+    alert('Please enter a number less than 100');
   } else {
     prevGuess.push(guess);
-    if (numGuess === 10) {
+    if (numGuess === 11) {
       cleanUpGuess(guess);
-      displayMessage(`Game Over. Random number was ${randomNum}`);
+      displayMessage(`Game Over, RandomNumber was ${randomNumber}`);
+      endGame();
     } else {
       cleanUpGuess(guess);
       checkGuess(guess);
     }
   }
 }
-
+// in this check method we check the value of the input given by user and compare with the random generated number and print message if he win it will end the game and hence newgame 
 function checkGuess(guess) {
-  if (guess === randomNum) {
-    displayMessage('you guessed it right');
-    endGame();
-  } else if (guess < randomNum) {
-    displayMessage('your guess is Too low');
-  } else if (guess > randomNum) {
-    displayMessage('your guess is Too High');
+  if (guess === randomNumber) {
+    displayMessage(`you Guessed it right`);
+// i thing endGame() should be here, this is important point to be discussed
+  } else if (guess < randomNumber) {
+    displayMessage(`Number is Too low `);
+  } else if (guess > randomNumber) {
+    displayMessage(`Number is Too High`);
   }
 }
 
+// in thei cleanUpGuess(guess) we have defined to clean up the input box and the guessed value to add in the preveous guesses and numguess should increase and remaining should calculate 
+
 function cleanUpGuess(guess) {
   userInput.value = '';
-  Guesses.innerHTML += `${guess},    `;
+  guessSlot.innerHTML += `${guess},  `;
   numGuess++;
-  guessRemaining.innerHTML = `${10 - numGuess}`;
+  guessRemaining.innerHTML = `${11 - numGuess}`;
 }
+
+//in this functio we have defined the dispaymessage(message) where to show 
 
 function displayMessage(message) {
   lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
+
+// here in the endGame() method we have defined what will happen when this function will work like it will clean the userInput and disable it and appending a new p which had been created above with an id and writting start new game then stoping the game and then passing it to newGame()
 
 function endGame() {
   userInput.value = '';
   userInput.setAttribute('disabled', '');
   p.classList.add('button');
   p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
-  startOver.appendChild(p)
-  
+  startOver.appendChild(p);
   playGame = false;
   newGame();
 }
 
-function newGame() {
-  const newgameButton = document.querySelector('#newGame');
-  newgameButton.addEventListener('click', function (e) {
-    randomNum = parseInt(Math.random() * 100 + 1);
-    prevGuess = [];
-    numGuess = 1;
-    Guesses.innerHTML = '';
-    guessRemaining.innerHTML = `${10 - numGuess}`;
-    userInput.removeAttribute('disabled');
-    startOver.removeChild(p);
+// here we are trying to add even on the above created button and reserting all to play again like the sequece you can see
 
-    playGame = true;
+function newGame() {
+  const newGameBtn = document.querySelector('#newGame');
+  newGameBtn.addEventListener('click', function (e) {
+    randomNumber = parseInt(Math.random() * 100 + 1)
+    prevGuess = [];
+    numGuess = 1
+    guessSlot.innerHTML = ''
+    guessRemaining.innerHTML = `${11 - numGuess}`;
+    userInput.removeAttribute('disabled');
+    startOver.removeChild(p)
+    playGame = true
   });
 }
 
