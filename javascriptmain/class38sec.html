@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set interval</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <h1>Chai aur Javascript </h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setInterval(function () {
+        // console.log("Asta", Date.now())
+    }, 1000)
+
+    // const sayDate = function(){
+    //     console.log('Asta', Date.now())
+    // }
+    const sayDate = function (str) {
+        console.log(str, Date.now())
+    }
+
+    //   setInterval(sayDate, 1000)
+    const intervalId = setInterval(sayDate, 1000, "Hi") //even paremeter passes which is str and here "hi"
+
+    // here to stop this we use clearInterval() method and here we passes the reference as we did in previous class storing the above setiIterval in a variable herer it is interValId
+    clearInterval(intervalId)
+
+    /*
+    after we did this we got that this stops the function but this is not so good so we should design something that when we touch a swich start then it do the same and when we stop it should stop all let us see how 
+    */
+
+// Create an array of ten names
+const names = ["Js channel", "youtube", "Bob", "Alice", "Tom", "Jane", "Peter", "Susan", "David", "Sarah"];
+
+// Create an h2 element
+// const h2 = document.createElement("h2");
+
+// Loop through the array and add each name to the h2 element
+for (let i = 0; i < names.length; i++) {
+  h1.innerHTML += names[i] + "<br>";
+}
+
+// Append the h2 element to the document body
+document.body.appendChild(h2);
+
+
+    let interval;
+    const listenme = function () {
+        interval = setInterval(print, 2000);
+
+        const print = function () {
+            document.querySelector('h1').innerHTML = 'Best js series'
+            console.log('asta')
+        }
+
+    }
+
+    const Stopnonsence = function () {
+        clearInterval(interval)
+    }
+
+
+    document.querySelector('#start').addEventListener('click', listenme)
+
+    document.querySelector('#stop').addEventListener('click', Stopnonsence)
+
+
+</script>
+
+</html>
