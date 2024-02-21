@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async class</title>
+</head>
+
+<body style="background-color: #212121; color: white;">
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // document.querySelector('h1').innerHTML = 'Best js Series'
+
+    /*
+    this is how we changed the inner text of the h1 from chai aur code to best js series but 
+    when we try to change it after 4 second then how? lets see 
+
+    */
+    //    We will use the settimeout which is a function lets understand what is it ?
+
+    // setTimeout(function (){
+    //     console.log("Asta")  // this print Asta after 4 second because settimeout is 4000 because it in milisecond
+    // }, 4000)
+
+    // we can write the same in different style see how?
+    const sayMyName = function () {
+        console.log("Asta")
+    }
+    // setTimeout( sayMyName, 4000)  
+    /*
+    this is how we write the above first setTimeout  in different style, here we just store the whole function 
+    in the variable saymyName and then put this variable as reference in the settimeout function you can see, 
+    *remember this is the variable is taken as reference not as method so don't use parenthesis after the variable
+    i.e sayMyName(), it will be wrong
+    */
+
+    // Now let's see we will change the chai aur Code to Best js series after 2 second which was our main goal
+
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "Best Js"
+    }
+
+    // setTimeout(changeText, 2000)
+
+    // now it is time to learn what to do when want to stop this function, this is done using clearTimeout
+
+    clearTimeout()
+    /*to execute it we have to give reference that what settimeout has to be stopped so let's store the 
+    setTimeOut(changeText,2000) and give this reference. See How?
+    */
+    const stoptimeout = setTimeout(changeText, 2000)
+    // to execute clearTimeout() we give the stoptimeout reference 
+
+    // clearTimeout(stoptimeout) 
+    //we first set time out and then cleared but we want a switch that will help to stop the set timeout and hence execution when we click on that button
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearTimeout(stoptimeout)
+    })
+
+// when we do this this stop button get powered and when this chari aur code to best js changes in 2 sec and if we click on the stop button in between this 2 sec then it will clear the settimeout and it will not change 
+</script>
+
+</html>
