@@ -206,3 +206,51 @@ function newGame() {
 
 
 ```
+
+## project 5 (unlimited color change on click using setInterval)     : solution Code
+
+```javascript 
+
+//generating a random color in hexcode
+// random color can be generated using random hexvalue
+
+function randomColor() {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+
+  return color;
+}
+/*
+finally generated the hex value and pushed to the color which is # then it become a six digit  and one # code which gives color these number are like  #DF021E it keep generating which is keep changing the color as the number changed 
+*/
+console.log(randomColor()); // this is checking the random color number like #0A331F
+
+// Here we are setting time interval i.e when to change
+
+let interval;
+const startChangingColor = function () {
+  if (!interval) {
+    interval = setInterval(changeBgColor, 1000);
+  }
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+const stopChangingColor = function () {
+  clearInterval(interval);
+  interval = null;
+  /*
+   interval null is used to flush out so that if we click the start nutton again and again then it will never over ride means not repeat when the one click is going on.  ofter doing this we give a condition check to the startchangingColor cunction so that if there is any click going on then it will not allow another if that is not there then only it will work. so it is a clean code writting prcatice 
+   */
+};
+
+// targetting button and giving click even and refering to the given variable
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+```
