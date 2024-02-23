@@ -1,0 +1,71 @@
+<!-- Api request and more on this class  here we would work in js but with 
+so it is html file here we would add script below 
+ -->
+
+<!-- what is Ajax = asynchronous JavaScript and xml  it is not a technology itself but 
+rather an approach to using a number of existing technologies togethere, 
+including HTML or XHTML, css JavaScript, DOM, XML, XSLT, and most importantly 
+XMLHttpRequest object. When these thechnologies are combined in the Ajax model, web
+application are able to make quick, increamental updates to the user interface without 
+reloading the entire browser page 
+
+** Read XMLHttpRequest in detail https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+
+Ajax  https://developer.mozilla.org/en-US/docs/Glossary/AJAX    -->
+
+<!--
+ The XMLHttpRequest.readyState property returns the state an XMLHttpRequest client is in. 
+ An XHR client exists in one of the following states:
+
+Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request and V8 Engine</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <h1>have to create an object and then i have t0
+        add there their follower list and his image</h1>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/Astakk123'
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    // to know the state of the url 
+    // now the ready state is 1 ato see all the ready state 
+    console.log(xhr.readyState) // this is first stage 
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            // here xhr redy state is 4 means it is the last state where we get the data and complete it 
+            console.log(this.responseText) // we get the full date from the api url means the response from request where a lot of data is there 
+            // now how to acces a particular data 
+        
+            // to do this we know that it given in the object format so we will use the data retriving method as we did in object 
+        //    so lets store this.responseText in a varible which will make our job easy
+        // const data = this.responseText
+        const data = JSON.parse(this.responseText) // converted to json
+        // console.log(data.followers) // it is undefined because the data type is different 
+        // console.log(typeof data)  // it is string so there is undefined so lets convert it to JSON because it is a number 
+        // const data = JSON.parse(this.responseText) // now it converted to json and we can access follwer
+        console.log(data.followers) //result is zero for this api data means this person has zero follwers
+        }
+    },
+        xhr.send()
+
+//+++++++++++++++++++++++++++ have to continue the same video from 23:18 which is on V8 Engine 
+</script>
+
+</html>
