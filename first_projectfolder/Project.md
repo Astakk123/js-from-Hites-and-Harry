@@ -66,7 +66,7 @@ form.addEventListener('submit', function (e) {
 
 ```
 
-## project 3 solution code
+## project 3 solution code of (digital clock)
 ```javascript
 const clock = document.getElementById('clock');
 
@@ -93,7 +93,8 @@ clock.style.color = 'black'
 clock.style.backgroundColor = 'white'
 
 ```
-## project 4  (Guess Number Game)
+
+## project 4 solution code of (Guess Number Game)
 ```javascript
 //strategy should be written first on plane paper
 
@@ -207,8 +208,38 @@ function newGame() {
 
 ```
 
-## project 5 (unlimited color change on click using setInterval)     : solution Code
+## project 5 solution code of (KeyBoard detector) 
+```javascript
+// taking Reference
 
+const insert = document.getElementById('insert')
+
+//adding event
+
+window.addEventListener('keydown', (e) =>{
+  insert.innerHTML = `
+  <div class="color"> <table>
+  
+  <tr>
+    <th>Key</th>
+    <th>Keycode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'Space' : e.key}</td>v
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+ 
+</table>
+  </div>
+  `
+})
+// in the above the class color is already exist in the html and the table is being injected in the insert here isert is the id of an element where we would add the table using inner.HTML 
+
+```
+
+## project 6 solution code of (unlimited color change on click using setInterval) 
 ```javascript 
 
 //generating a random color in hexcode
