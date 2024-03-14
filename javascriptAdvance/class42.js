@@ -44,7 +44,7 @@ function User(username, loginCount, isLoggedIn){
 
 const userOne = new User("hitesh", 12, true)
 const userTwo = new User("ChaiAurCode", 11, false)
-/* if we don't add the "new" which is constructor then we can't get a fresh instance 
+/* if we don't add the "new" which is instance then we can't get a fresh instance 
 then when we pass the value in the above given function or object then this value override 
 the last one and it disturb everything we can't ful fill our purpose 
 
