@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bind</title>
 </head>
+
 <body>
     <button>Click Here</button>
+
+    what is your name
 </body>
 <script>
     // ******* have to study clearly 
-    class Reack {
-        constructor(){
-            this.library = "Reack"
+    class React {
+        constructor() {
+            this.library = "React"
             this.server = "https://localhost:300"
 
             // our requirement 
-            document.querySelector('button').addEventListener('click', this.handleClick)
+            // document.querySelector('button').addEventListener('click', this.clicked)
+            // here in the above there is no bind so the above this which is React and httpswala is 
+            // not accesible when we click only refference we get i.e button clicked and the reference 
+
+            // but in the code line 26 it gives the whole this which is react and httpsand more 
+
+            document.querySelector('button').addEventListener('click', this.clicked.bind(this))
+            
+
+            // document.querySelector('button').addEventListener('click', this.changecolor)
         }
-        handleClick(){
-            console.log("button clicked ");
-            console.log(this.server);
+        changecolor() {
+            document.body.style.backgroundColor = 'black'
+            document.body.style.color = 'white'
+        }
+
+        clicked() {
+            console.log("button clicked");
+            console.log(this);
         }
     }
+    const app = new React()
 </script>
+
 </html>
