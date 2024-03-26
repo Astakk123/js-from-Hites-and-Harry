@@ -1,0 +1,117 @@
+<!-- Closure and lexical scoping  " i did this using the local vs code and after cloning " -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure and lexical scoping </title>
+</head>
+
+<body style="background-color: #151515;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+
+// +++++++++++++++++ lexical scoping  starts here +++++++++++++++++++++++++++
+
+    // function init(){
+    //     let name = "mozilla";
+    //     function displayName(){
+    //         console.log(name);
+    //     }
+    //     displayName();
+
+    // }
+    // init();
+    // we know every funtion has its own scope let's see that first 
+
+    // function outer() {
+    //     let username = "Asta"
+    // }
+    // console.log(username); // username is not defined because it is not present out of the scope of the above scope
+
+// again by doing some nesting checking the same concept
+// here we have made a little change and observing what is happening
+
+    // function outer() {
+    //     let username = "Asta"
+    //    function inner(){
+    //     console.log('inner' , username)
+    //    } 
+    //    inner()
+    // }
+    // outer()
+    // console.log('too outer',  username);
+    /*
+    1) Note
+    here if the function contain another funtion then the 
+    inner function can acces the variable of the outer function
+    but not the outer one can access the inner or if we do the out side of the function 
+    thi is a pure case of scoping only i.e lexical scoping  
+
+    2) Note 
+    Remember we had talked about the scoping earlier but we had 
+    discussed about the global and the local or a particular funtional scoping 
+
+    3) Note 
+    brotheres can't share the prop or varible but child can 
+    acces the prop or variable of the parent. and parent can't access
+    child's prop we know that 
+    */
+
+    // +++++++++++++++++++++++ Closure starts here ++++++++++++++++++++++++++++++++
+    
+
+   function makefun(){
+    const name = "mozila";
+    function displayName(){
+        console.log(name)
+    }
+    return displayName;
+   }
+   const myfunc = makefun()
+   myfunc()
+
+   /* 
+   1) importatn Note 
+
+   here one thing can be observed that we call the myfunc() which is makefun() i.e outer function but it execute
+    the property of displayName() also which is console.log(name) which is not possible in other case here the 
+    return word make thiis magic and this is called closure where it takes tha whole memory and execute so 
+    here parent also access the child prop and this is why when we call myyfunc() at the end it print Mozila
+    because it access the displayName() otherwise if we call without the rerunt displayName it wouldn't print anything 
+    because there was nothing to print 
+   */
+
+//   lets do a task using this and understand how importantt it is 
+
+//   task is on clicking the orange button it color of body should change to orange and green when click on green button
+
+// document.getElementById('orange').onclick = function(){
+//     document.body.style.backgroundColor = 'orange'
+// }
+
+// document.getElementById("green").onclick = function(){
+//     document.body.style.backgroundColor = 'green'
+// }
+// we achieved the result this way as we did in the above but it it not the perfet way 
+
+function clickhandler(color){
+    return function(){
+        document.body.style.backgroundColor = `${color}`
+    }
+}
+document.getElementById('orange').onclick = clickhandler('orange')
+document.getElementById('green').onclick =  clickhandler('green')
+
+/* 
+this is possible because of closure 
+the fucntions color is accesible to the clickhandler function 
+*/
+// closure is finished
+</script>
+
+</html>
